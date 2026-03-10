@@ -26,7 +26,7 @@ Build a web application that:
 
 ### Phase 0: Exploring Options
 
-Before settling on the Claude approach, I explored  AI assisted vibe-coding web app sites such as Bolt.new that could generate full-stack applications. However, these came with complications I didn't want such as:
+Before settling on the Claude approach, I explored  AI assisted vibe-coding web app sites such as Bolt.new that could generate a full-stack applications. However, these came with complications I didn't want such as:
 - **Deployment Hassle**: Would need to host the app somewhere, manage servers, deal with uptime
 - **Security Concerns**: Uploading financial documents (utility bills) to a third-party server felt risky
 - **Overkill**: These tools were designed for complex applications, not simple utility scripts
@@ -41,12 +41,14 @@ Before settling on the Claude approach, I explored  AI assisted vibe-coding web 
 
 This led me to Claude, where I could describe exactly what I needed and get a standalone solution without the overhead of traditional web app infrastructure.
 
-### Development Approach: AI-Assisted Pair Programming
+### Development Approach: Conversational Based Programming
 
 This project was built in collaboration with Claude through an iterative, conversational development process. Rather than writing code from scratch, I described what I needed, provided examples, and worked through problems as they arose.
 
 ### Phase 1: Initial Requirements
-Started with a simple request: split utility bills automatically and generate emails. Key requirements:
+I started with a simple request: split utility bills automatically and generate emails.
+
+Key requirements:
 - Support for Seattle Public Utilities bill format
 - 50/25/25 split for water and sewer (unmetered units)
 - Even 33/33/33 split for trash
@@ -103,9 +105,12 @@ Made it accessible:
 - **Adjustment Tracking**: Identifies extra charges (like "Extra Garbage") separately
 - **Email Generation**: Creates formatted drafts matching your communication style
 <p align="center">
-  <img src="images/Homepage.png" width="30%" />
-  <img src="images/Example-Normal.png" width="30%" />
-  <img src="images/Example-Anomaly.png" width="30%" />
+  Homepage:<br>
+  <img src="images/Homepage.png" width="60%" />
+  <br>Example with no extra charges:<br>
+  <img src="images/Example-Normal.png" width="60%" />
+  <br>Example with extra charges:<br>
+  <img src="images/Example-Anomaly.png" width="60%" />
 </p>
 
 ## 🛠️ Technical Implementation
@@ -121,53 +126,34 @@ Made it accessible:
 
 ## 🎓 Lessons Learned
 
-### AI-Assisted Development Works
+AI-Assisted Development Works
 - **Speed**: Idea to working app in ~1 hour
 - **Iteration**: Real-time bug fixes and feature additions
 - **Focus**: I handled requirements and testing; Claude handled implementation
 
-## 📁 File Structure
-
-```
-utility-bill-splitter/
-├── utility-splitter.html          # Standalone application
-├── README.md                       # This file
-└── examples/
-    ├── Sept2025Bill.pdf           # Example bill (redacted)
-    ├── May2025Bill.pdf            # Example with extra charges
-    └── ExampleEmail.pdf           # Email format reference
-```
 
 ## 🚦 Usage
-
+**Requirements**: Modern browser, internet for initial CDN loads (works offline after)
 1. Download `hoa-splitter-standalone.html`
 2. Double-click to open in browser
 3. Upload your Seattle Utilities bill (PDF or TXT)
 4. Review charges and anomalies
 5. Copy the generated email
 
-**Requirements**: Modern browser, internet for initial CDN loads (works offline after)
-
-## 📝 License
-
-MIT License - Feel free to use, modify, and distribute as needed.
-
-## 🤝 Contributing
-
-This was built as a personal tool, but suggestions and improvements are welcome! If you find this useful and want to adapt it for your own HOA or utility provider, feel free to fork and modify.
-
 ## 💡 Inspiration
 
-Born out of necessity - the best projects often are. Sometimes the most impactful software is the kind that saves you 15 minutes every two months, because those minutes add up, and manual repetitive tasks are soul-crushing.
-
-**The AI Angle**: This project also demonstrates a new way of building software. Instead of spending hours researching PDF parsing libraries, learning React build tools, or debugging CSS positioning issues, I described what I needed in plain English and worked through problems conversationally. The result is a tool that solves my exact problem, built in the time it would have taken just to set up the development environment the traditional way.
+This project was born out of a real problem and a desire to test out new technology. Instead of spending hours researching PDF parsing libraries, learning React build tools, or debugging CSS positioning issues, I described what I needed in plain English and worked through problems conversationally. The result is a tool that solves my exact problem, built in the time it would have taken just to set up the development environment the traditional way.
 
 ## 📧 Contact
 
 Questions? Found a bug? Want to share how you adapted this for your own use? Feel free to open an issue!
 
+This was built as a personal tool, but suggestions and improvements are welcome! If you find this useful and want to adapt it for your own HOA or utility provider, feel free to fork and modify.
+
 ---
 
-**Built with** ☕ and Claude AI - demonstrating that the future of software development is conversational.
+This entire project, including this README, was created through natural language conversation with Claude, demonstrating that the future of software development is conversational.
 
-*This entire project, including this README, was created through natural language conversation with Claude. Total development time: ~2 hours. Time saved per bill: ~15 minutes. Return on investment: Immediate.*
+Total development time: ~2 hours. <br>
+Time saved per bill: ~15 minutes.<br>
+Return on investment: Immediate.<br>
